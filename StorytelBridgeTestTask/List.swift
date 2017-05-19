@@ -34,26 +34,23 @@ struct Book {
 
 class List {
     
-    var title: String?
-    var coverURL: String?
+    var title = String()
+    var coverURL = String()
     
-    var books: [Book]?
+    var books = [Book]()
     
     init(response: Any?) {
         let json = JSON(response!)
         
         let metadata = json["metadata"]
-        self.title = metadata["title"].string
-        self.coverURL = metadata["cover"]["url"].string
+        self.title = metadata["title"].string!
+        self.coverURL = metadata["cover"]["url"].string!
         
         let consumables = json["consumables"].array
         
         for consumable in consumables! {
             let book = Book(metadata: consumable["metadata"])
-            books?.append(book)
+            books.append(book)
         }
-        
-        print(books)
     }
-    
 }
