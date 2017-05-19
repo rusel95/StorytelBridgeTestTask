@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84257EC71ECF1B1100936618 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84257EC61ECF1B1100936618 /* Extensions.swift */; };
 		8460DBCE1ECDC2C7001D78B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBCD1ECDC2C7001D78B1 /* AppDelegate.swift */; };
 		8460DBD31ECDC2C7001D78B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD11ECDC2C7001D78B1 /* Main.storyboard */; };
 		8460DBD51ECDC2C7001D78B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		048AA36CFB984E25D677B270 /* Pods_StorytelBridgeTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorytelBridgeTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CCB7904947B82B8DA03E6A7 /* Pods-StorytelBridgeTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelBridgeTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		2C39EF3D9F02A64E9C9F0756 /* Pods-StorytelBridgeTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelBridgeTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		84257EC61ECF1B1100936618 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8460DBCA1ECDC2C7001D78B1 /* StorytelBridgeTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytelBridgeTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8460DBCD1ECDC2C7001D78B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8460DBD21ECDC2C7001D78B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,8 @@
 		84257EC51ECF15E300936618 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84257EC61ECF1B1100936618 /* Extensions.swift */,
+				8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */,
 				8460DBD61ECDC2C7001D78B1 /* LaunchScreen.storyboard */,
 				8460DBD91ECDC2C7001D78B1 /* Info.plist */,
 			);
@@ -90,7 +94,6 @@
 				8460DBE21ECEC4DC001D78B1 /* Model */,
 				8460DBE31ECEC4EB001D78B1 /* Views */,
 				8460DBE41ECEC4F3001D78B1 /* Controller */,
-				8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */,
 				84257EC51ECF15E300936618 /* Helpers */,
 			);
 			path = StorytelBridgeTestTask;
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8460DBE61ECEC5C5001D78B1 /* List.swift in Sources */,
+				84257EC71ECF1B1100936618 /* Extensions.swift in Sources */,
 				8460DBCE1ECDC2C7001D78B1 /* AppDelegate.swift in Sources */,
 				848F4CC71ECF031700208CC8 /* BookTableViewCell.swift in Sources */,
 				848F4CC91ECF040900208CC8 /* ListTableViewController.swift in Sources */,

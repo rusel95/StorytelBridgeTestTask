@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qZp-f6-CXU">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,21 +14,21 @@
         <scene sceneID="3Q5-Vz-gh8">
             <objects>
                 <tableViewController id="qZp-f6-CXU" customClass="ListTableViewController" customModule="StorytelBridgeTestTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G2M-gw-IY8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G2M-gw-IY8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="6WW-b2-EgK">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-LP-O0G">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-QW-IDD">
-                                    <rect key="frame" x="127" y="83" width="123" height="35"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-QW-IDD">
+                                    <rect key="frame" x="99" y="83" width="123" height="35"/>
                                     <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="35"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -44,46 +44,52 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="150" id="D3Y-JS-T0k" customClass="BookTableViewCell" customModule="StorytelBridgeTestTask" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="228" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D3Y-JS-T0k" id="Umo-8J-10c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-AG-h2Z">
-                                            <rect key="frame" x="8" y="0.0" width="130" height="150"/>
+                                            <rect key="frame" x="8" y="25" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="Xpx-NM-nz8"/>
+                                                <constraint firstAttribute="width" constant="100" id="Xpx-NM-nz8"/>
+                                                <constraint firstAttribute="height" constant="100" id="ptJ-D6-mdn"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By: Author name, Author name 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-CL-I5v">
-                                            <rect key="frame" x="154" y="77.5" width="221" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With: Narrator name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKC-Ng-COg">
+                                            <rect key="frame" x="116" y="105" width="196" height="20"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With: Narrator name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKC-Ng-COg">
-                                            <rect key="frame" x="154" y="109.5" width="221" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-KP-4Ol">
+                                            <rect key="frame" x="116" y="32" width="196" height="23"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-KP-4Ol">
-                                            <rect key="frame" x="154" y="8" width="213" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="19"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Author name, Author name 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-CL-I5v">
+                                            <rect key="frame" x="116" y="77" width="196" height="20"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="leading" secondItem="AaU-AG-h2Z" secondAttribute="trailing" constant="8" symbolic="YES" id="2bX-bb-laq"/>
+                                        <constraint firstItem="NYk-KP-4Ol" firstAttribute="trailing" secondItem="cKC-Ng-COg" secondAttribute="trailing" id="AR8-yR-bVU"/>
+                                        <constraint firstItem="NYk-KP-4Ol" firstAttribute="leading" secondItem="cKC-Ng-COg" secondAttribute="leading" id="FCr-LU-FQq"/>
+                                        <constraint firstItem="gyG-CL-I5v" firstAttribute="top" secondItem="NYk-KP-4Ol" secondAttribute="bottom" constant="22" id="FRJ-CR-h5M"/>
+                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="top" secondItem="gyG-CL-I5v" secondAttribute="bottom" constant="8" symbolic="YES" id="Sh8-uw-z4R"/>
+                                        <constraint firstItem="gyG-CL-I5v" firstAttribute="leading" secondItem="cKC-Ng-COg" secondAttribute="leading" id="aPZ-l7-KrO"/>
+                                        <constraint firstItem="gyG-CL-I5v" firstAttribute="trailing" secondItem="cKC-Ng-COg" secondAttribute="trailing" id="bEd-1L-BWs"/>
+                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="bottom" secondItem="AaU-AG-h2Z" secondAttribute="bottom" id="d1R-Zw-iVC"/>
                                         <constraint firstItem="AaU-AG-h2Z" firstAttribute="leading" secondItem="Umo-8J-10c" secondAttribute="leadingMargin" id="tap-P7-gsD"/>
+                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="trailing" secondItem="Umo-8J-10c" secondAttribute="trailingMargin" id="xjI-sD-eH2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
-                                    <constraint firstItem="AaU-AG-h2Z" firstAttribute="height" secondItem="D3Y-JS-T0k" secondAttribute="height" id="5KP-RV-lNh"/>
                                     <constraint firstItem="AaU-AG-h2Z" firstAttribute="centerY" secondItem="D3Y-JS-T0k" secondAttribute="centerY" id="RqQ-YS-HfE"/>
                                 </constraints>
                                 <connections>
@@ -106,7 +112,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0n-8I-Ggl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="76.911544227886068"/>
+            <point key="canvasLocation" x="37.5" y="76.056338028169009"/>
         </scene>
     </scenes>
 </document>

@@ -40,10 +40,14 @@ class ListTableViewController: UITableViewController {
     }
     
     private func setView(with list: List) {
-        coverImage.af_setImage(withURL: URL(fileURLWithPath: list.coverURL) )
+        coverImage.loadImageIntoCacheUsingUrlString(url: list.coverURL)
         titleLabel.text = list.title
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentList.books.count
     }

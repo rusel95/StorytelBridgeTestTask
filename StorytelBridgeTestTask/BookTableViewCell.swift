@@ -18,7 +18,7 @@ class BookTableViewCell: UITableViewCell {
     
     func setCell(with book: Book) {
         
-        bookImage.af_setImage(withURL: URL(fileURLWithPath: book.coverUrl ) )
+        bookImage.loadImageIntoCacheUsingUrlString(url: book.coverUrl)
         
         bookTitle.text = book.title
         
