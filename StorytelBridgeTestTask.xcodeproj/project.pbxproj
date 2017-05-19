@@ -12,9 +12,15 @@
 		8460DBD31ECDC2C7001D78B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD11ECDC2C7001D78B1 /* Main.storyboard */; };
 		8460DBD51ECDC2C7001D78B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */; };
 		8460DBD81ECDC2C7001D78B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD61ECDC2C7001D78B1 /* LaunchScreen.storyboard */; };
+		8460DBE11ECEBB9C001D78B1 /* StorytelBridgeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBE01ECEBB9C001D78B1 /* StorytelBridgeApi.swift */; };
+		8460DBE61ECEC5C5001D78B1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBE51ECEC5C5001D78B1 /* List.swift */; };
+		FF8E8A09F559E2BF7B82AEA4 /* Pods_StorytelBridgeTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048AA36CFB984E25D677B270 /* Pods_StorytelBridgeTestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048AA36CFB984E25D677B270 /* Pods_StorytelBridgeTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorytelBridgeTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CCB7904947B82B8DA03E6A7 /* Pods-StorytelBridgeTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelBridgeTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		2C39EF3D9F02A64E9C9F0756 /* Pods-StorytelBridgeTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelBridgeTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		8460DBCA1ECDC2C7001D78B1 /* StorytelBridgeTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytelBridgeTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8460DBCD1ECDC2C7001D78B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8460DBCF1ECDC2C7001D78B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8460DBD71ECDC2C7001D78B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8460DBD91ECDC2C7001D78B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8460DBE01ECEBB9C001D78B1 /* StorytelBridgeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorytelBridgeApi.swift; sourceTree = "<group>"; };
+		8460DBE51ECEC5C5001D78B1 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8E8A09F559E2BF7B82AEA4 /* Pods_StorytelBridgeTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83339DF5FDDBB7A6050B8BDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C39EF3D9F02A64E9C9F0756 /* Pods-StorytelBridgeTestTask.debug.xcconfig */,
+				1CCB7904947B82B8DA03E6A7 /* Pods-StorytelBridgeTestTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8460DBC11ECDC2C7001D78B1 = {
 			isa = PBXGroup;
 			children = (
 				8460DBCC1ECDC2C7001D78B1 /* StorytelBridgeTestTask */,
 				8460DBCB1ECDC2C7001D78B1 /* Products */,
+				83339DF5FDDBB7A6050B8BDD /* Pods */,
+				E9040BA170D3D931A9D742B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +75,55 @@
 			isa = PBXGroup;
 			children = (
 				8460DBCD1ECDC2C7001D78B1 /* AppDelegate.swift */,
-				8460DBCF1ECDC2C7001D78B1 /* ViewController.swift */,
+				8460DBDF1ECEBB73001D78B1 /* API */,
+				8460DBE21ECEC4DC001D78B1 /* Model */,
+				8460DBE31ECEC4EB001D78B1 /* Views */,
+				8460DBE41ECEC4F3001D78B1 /* Controller */,
 				8460DBD11ECDC2C7001D78B1 /* Main.storyboard */,
 				8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */,
 				8460DBD61ECDC2C7001D78B1 /* LaunchScreen.storyboard */,
 				8460DBD91ECDC2C7001D78B1 /* Info.plist */,
 			);
 			path = StorytelBridgeTestTask;
+			sourceTree = "<group>";
+		};
+		8460DBDF1ECEBB73001D78B1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8460DBE01ECEBB9C001D78B1 /* StorytelBridgeApi.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		8460DBE21ECEC4DC001D78B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8460DBE51ECEC5C5001D78B1 /* List.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8460DBE31ECEC4EB001D78B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8460DBE41ECEC4F3001D78B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8460DBCF1ECDC2C7001D78B1 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E9040BA170D3D931A9D742B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				048AA36CFB984E25D677B270 /* Pods_StorytelBridgeTestTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8460DBDC1ECDC2C7001D78B1 /* Build configuration list for PBXNativeTarget "StorytelBridgeTestTask" */;
 			buildPhases = (
+				90DA6186923C2E7FC8EF6C7D /* [CP] Check Pods Manifest.lock */,
 				8460DBC61ECDC2C7001D78B1 /* Sources */,
 				8460DBC71ECDC2C7001D78B1 /* Frameworks */,
 				8460DBC81ECDC2C7001D78B1 /* Resources */,
+				6D356B8CC613C9EA28623589 /* [CP] Embed Pods Frameworks */,
+				378D351D6B76CD8C5C83C405 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +197,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		378D351D6B76CD8C5C83C405 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D356B8CC613C9EA28623589 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90DA6186923C2E7FC8EF6C7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8460DBC61ECDC2C7001D78B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8460DBD01ECDC2C7001D78B1 /* ViewController.swift in Sources */,
+				8460DBE61ECEC5C5001D78B1 /* List.swift in Sources */,
 				8460DBCE1ECDC2C7001D78B1 /* AppDelegate.swift in Sources */,
+				8460DBE11ECEBB9C001D78B1 /* StorytelBridgeApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -249,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -259,10 +374,12 @@
 		};
 		8460DBDD1ECDC2C7001D78B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C39EF3D9F02A64E9C9F0756 /* Pods-StorytelBridgeTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FWHF624C4H;
 				INFOPLIST_FILE = StorytelBridgeTestTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rusel95.StorytelBridgeTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +389,12 @@
 		};
 		8460DBDE1ECDC2C7001D78B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CCB7904947B82B8DA03E6A7 /* Pods-StorytelBridgeTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FWHF624C4H;
 				INFOPLIST_FILE = StorytelBridgeTestTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rusel95.StorytelBridgeTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +421,7 @@
 				8460DBDE1ECDC2C7001D78B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
