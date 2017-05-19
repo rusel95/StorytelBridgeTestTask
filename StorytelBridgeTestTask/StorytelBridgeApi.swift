@@ -17,20 +17,21 @@ class StorytelBridgeApi {
     
     private let apiUrl = "http://api.storytelbridge.com/consumables/list/1"
     
-    func getList(giveList: @escaping (List?) -> Void) -> Void {
+    func getList(on page: Int, give: @escaping (List?) -> Void) -> Void {
         
-        let urlForRequest = apiUrl
+        let pageURL = "?page=" + String(page)
+        let urlForRequest = apiUrl + pageURL
         
         Alamofire.request(urlForRequest).responseJSON { (response) in
             switch response.result {
                 
             case .success:
                 let list = List(response: response.result.value)
-                giveList(list)
+                give(list)
                 
             case .failure(let error):
                 print(error.localizedDescription, urlForRequest)
-                giveList(nil)
+                give(nil)
             }
         }
     }

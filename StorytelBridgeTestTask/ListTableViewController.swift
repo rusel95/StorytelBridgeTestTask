@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import AlamofireImage
 
 class ListTableViewController: UITableViewController {
 
+    private var neededPage = 0
+    
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -30,9 +31,10 @@ class ListTableViewController: UITableViewController {
     }
     
     private func getCurrentList() {
-        StorytelBridgeApi.shared.getList { list in
+        StorytelBridgeApi.shared.getList(on: neededPage) { list in
             if list != nil {
                 self.currentList = list!
+                self.neededPage += 1
             } else {
                 print("alert about fall down")
             }
