@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8460DBCE1ECDC2C7001D78B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBCD1ECDC2C7001D78B1 /* AppDelegate.swift */; };
-		8460DBD01ECDC2C7001D78B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBCF1ECDC2C7001D78B1 /* ViewController.swift */; };
 		8460DBD31ECDC2C7001D78B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD11ECDC2C7001D78B1 /* Main.storyboard */; };
 		8460DBD51ECDC2C7001D78B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */; };
 		8460DBD81ECDC2C7001D78B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460DBD61ECDC2C7001D78B1 /* LaunchScreen.storyboard */; };
 		8460DBE11ECEBB9C001D78B1 /* StorytelBridgeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBE01ECEBB9C001D78B1 /* StorytelBridgeApi.swift */; };
 		8460DBE61ECEC5C5001D78B1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460DBE51ECEC5C5001D78B1 /* List.swift */; };
+		848F4CC71ECF031700208CC8 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F4CC61ECF031700208CC8 /* BookTableViewCell.swift */; };
+		848F4CC91ECF040900208CC8 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F4CC81ECF040900208CC8 /* ListTableViewController.swift */; };
 		FF8E8A09F559E2BF7B82AEA4 /* Pods_StorytelBridgeTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048AA36CFB984E25D677B270 /* Pods_StorytelBridgeTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +24,14 @@
 		2C39EF3D9F02A64E9C9F0756 /* Pods-StorytelBridgeTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelBridgeTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StorytelBridgeTestTask/Pods-StorytelBridgeTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		8460DBCA1ECDC2C7001D78B1 /* StorytelBridgeTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytelBridgeTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8460DBCD1ECDC2C7001D78B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8460DBCF1ECDC2C7001D78B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8460DBD21ECDC2C7001D78B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8460DBD71ECDC2C7001D78B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8460DBD91ECDC2C7001D78B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8460DBE01ECEBB9C001D78B1 /* StorytelBridgeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorytelBridgeApi.swift; sourceTree = "<group>"; };
 		8460DBE51ECEC5C5001D78B1 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		848F4CC61ECF031700208CC8 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		848F4CC81ECF040900208CC8 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,15 @@
 				1CCB7904947B82B8DA03E6A7 /* Pods-StorytelBridgeTestTask.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84257EC51ECF15E300936618 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8460DBD61ECDC2C7001D78B1 /* LaunchScreen.storyboard */,
+				8460DBD91ECDC2C7001D78B1 /* Info.plist */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		8460DBC11ECDC2C7001D78B1 = {
@@ -79,10 +90,8 @@
 				8460DBE21ECEC4DC001D78B1 /* Model */,
 				8460DBE31ECEC4EB001D78B1 /* Views */,
 				8460DBE41ECEC4F3001D78B1 /* Controller */,
-				8460DBD11ECDC2C7001D78B1 /* Main.storyboard */,
 				8460DBD41ECDC2C7001D78B1 /* Assets.xcassets */,
-				8460DBD61ECDC2C7001D78B1 /* LaunchScreen.storyboard */,
-				8460DBD91ECDC2C7001D78B1 /* Info.plist */,
+				84257EC51ECF15E300936618 /* Helpers */,
 			);
 			path = StorytelBridgeTestTask;
 			sourceTree = "<group>";
@@ -106,6 +115,8 @@
 		8460DBE31ECEC4EB001D78B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8460DBD11ECDC2C7001D78B1 /* Main.storyboard */,
+				848F4CC61ECF031700208CC8 /* BookTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -113,7 +124,7 @@
 		8460DBE41ECEC4F3001D78B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8460DBCF1ECDC2C7001D78B1 /* ViewController.swift */,
+				848F4CC81ECF040900208CC8 /* ListTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -250,9 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8460DBD01ECDC2C7001D78B1 /* ViewController.swift in Sources */,
 				8460DBE61ECEC5C5001D78B1 /* List.swift in Sources */,
 				8460DBCE1ECDC2C7001D78B1 /* AppDelegate.swift in Sources */,
+				848F4CC71ECF031700208CC8 /* BookTableViewCell.swift in Sources */,
+				848F4CC91ECF040900208CC8 /* ListTableViewController.swift in Sources */,
 				8460DBE11ECEBB9C001D78B1 /* StorytelBridgeApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

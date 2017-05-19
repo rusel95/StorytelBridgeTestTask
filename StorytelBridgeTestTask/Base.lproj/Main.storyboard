@@ -1,26 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qZp-f6-CXU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--List Table View Controller-->
+        <scene sceneID="3Q5-Vz-gh8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="qZp-f6-CXU" customClass="ListTableViewController" customModule="StorytelBridgeTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G2M-gw-IY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="6WW-b2-EgK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-LP-O0G">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-QW-IDD">
+                                    <rect key="frame" x="127" y="83" width="123" height="35"/>
+                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="35"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="hA0-QW-IDD" firstAttribute="centerY" secondItem="6WW-b2-EgK" secondAttribute="centerY" id="1h8-Gy-NPI"/>
+                                <constraint firstAttribute="trailing" secondItem="rKG-LP-O0G" secondAttribute="trailing" id="4bN-cl-HEF"/>
+                                <constraint firstItem="rKG-LP-O0G" firstAttribute="top" secondItem="6WW-b2-EgK" secondAttribute="top" id="Dmp-zW-hof"/>
+                                <constraint firstItem="hA0-QW-IDD" firstAttribute="centerX" secondItem="6WW-b2-EgK" secondAttribute="centerX" id="VwN-k7-oNo"/>
+                                <constraint firstItem="rKG-LP-O0G" firstAttribute="leading" secondItem="6WW-b2-EgK" secondAttribute="leading" id="YOV-iF-58B"/>
+                                <constraint firstAttribute="bottom" secondItem="rKG-LP-O0G" secondAttribute="bottom" id="w1w-em-OEe"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="150" id="D3Y-JS-T0k" customClass="BookTableViewCell" customModule="StorytelBridgeTestTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D3Y-JS-T0k" id="Umo-8J-10c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-AG-h2Z">
+                                            <rect key="frame" x="8" y="0.0" width="130" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="Xpx-NM-nz8"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By: Author name, Author name 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-CL-I5v">
+                                            <rect key="frame" x="154" y="77.5" width="221" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With: Narrator name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKC-Ng-COg">
+                                            <rect key="frame" x="154" y="109.5" width="221" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-KP-4Ol">
+                                            <rect key="frame" x="154" y="8" width="213" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AaU-AG-h2Z" firstAttribute="leading" secondItem="Umo-8J-10c" secondAttribute="leadingMargin" id="tap-P7-gsD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="AaU-AG-h2Z" firstAttribute="height" secondItem="D3Y-JS-T0k" secondAttribute="height" id="5KP-RV-lNh"/>
+                                    <constraint firstItem="AaU-AG-h2Z" firstAttribute="centerY" secondItem="D3Y-JS-T0k" secondAttribute="centerY" id="RqQ-YS-HfE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="authorsLabel" destination="gyG-CL-I5v" id="VsS-E2-jSA"/>
+                                    <outlet property="bookImage" destination="AaU-AG-h2Z" id="DdU-Tx-VsY"/>
+                                    <outlet property="bookTitle" destination="NYk-KP-4Ol" id="qA3-d9-C9K"/>
+                                    <outlet property="narratorsLabel" destination="cKC-Ng-COg" id="SUX-1m-tRg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qZp-f6-CXU" id="Hya-8h-EiB"/>
+                            <outlet property="delegate" destination="qZp-f6-CXU" id="Tz1-vS-XLx"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="coverImage" destination="rKG-LP-O0G" id="NfK-un-qQW"/>
+                        <outlet property="titleLabel" destination="hA0-QW-IDD" id="dMx-GD-afm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0n-8I-Ggl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="76.911544227886068"/>
         </scene>
     </scenes>
 </document>

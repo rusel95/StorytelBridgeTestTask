@@ -39,6 +39,10 @@ class List {
     
     var books = [Book]()
     
+    init() {
+        
+    }
+    
     init(response: Any?) {
         let json = JSON(response!)
         
