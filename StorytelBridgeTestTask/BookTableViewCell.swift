@@ -18,8 +18,7 @@ class BookTableViewCell: UITableViewCell {
     
     func setCell(with book: Book) {
         
-        bookImage.loadImageIntoCacheUsingUrlString(url: book.coverUrl)
-        
+        bookImage.setImage(with: book.coverUrl)
         bookTitle.text = book.title
         
         authorsLabel.text = "By: "

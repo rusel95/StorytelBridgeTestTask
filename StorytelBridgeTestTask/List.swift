@@ -13,7 +13,7 @@ struct Book {
     var authors = [String]()
     var narrators = [String]()
     var title = String()
-    var coverUrl = String()
+    var coverUrl: URL?
     
     init(metadata: JSON) {
         let tempAuthors = metadata["authors"].array
@@ -28,14 +28,14 @@ struct Book {
         
         self.title = metadata["title"].string!
         
-        self.coverUrl = metadata["cover"]["url"].string!
+        self.coverUrl = metadata["cover"]["url"].url
     }
 }
 
 class List {
     
     var title = String()
-    var coverURL = String()
+    var coverURL: URL?
     
     var books = [Book]()
     
@@ -48,7 +48,7 @@ class List {
         
         let metadata = json["metadata"]
         self.title = metadata["title"].string!
-        self.coverURL = metadata["cover"]["url"].string!
+        self.coverURL = metadata["cover"]["url"].url
         
         let consumables = json["consumables"].array
         

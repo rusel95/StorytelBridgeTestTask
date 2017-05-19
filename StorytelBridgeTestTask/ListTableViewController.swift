@@ -40,7 +40,8 @@ class ListTableViewController: UITableViewController {
     }
     
     private func setView(with list: List) {
-        coverImage.loadImageIntoCacheUsingUrlString(url: list.coverURL)
+        coverImage.setImage(with: list.coverURL)
+       
         titleLabel.text = list.title
     }
 

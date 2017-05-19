@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,22 +14,25 @@
         <scene sceneID="3Q5-Vz-gh8">
             <objects>
                 <tableViewController id="qZp-f6-CXU" customClass="ListTableViewController" customModule="StorytelBridgeTestTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G2M-gw-IY8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G2M-gw-IY8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="6WW-b2-EgK">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="6WW-b2-EgK" userLabel="ListTitle">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-LP-O0G">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-QW-IDD">
-                                    <rect key="frame" x="99" y="83" width="123" height="35"/>
-                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="35"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-QW-IDD">
+                                    <rect key="frame" x="107.5" y="85" width="105" height="30"/>
+                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="30"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,57 +44,76 @@
                                 <constraint firstItem="rKG-LP-O0G" firstAttribute="leading" secondItem="6WW-b2-EgK" secondAttribute="leading" id="YOV-iF-58B"/>
                                 <constraint firstAttribute="bottom" secondItem="rKG-LP-O0G" secondAttribute="bottom" id="w1w-em-OEe"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="150" id="D3Y-JS-T0k" customClass="BookTableViewCell" customModule="StorytelBridgeTestTask" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="320" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="110" id="D3Y-JS-T0k" customClass="BookTableViewCell" customModule="StorytelBridgeTestTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D3Y-JS-T0k" id="Umo-8J-10c">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-AG-h2Z">
-                                            <rect key="frame" x="8" y="25" width="100" height="100"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeG-IU-AEk">
+                                            <rect key="frame" x="12" y="8" width="296" height="96"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-AG-h2Z">
+                                                    <rect key="frame" x="4" y="8" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="AaU-AG-h2Z" secondAttribute="height" multiplier="1:1" id="Vue-oT-Tn8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With: Narrator name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKC-Ng-COg">
+                                                    <rect key="frame" x="92" y="74.5" width="204" height="20"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-KP-4Ol">
+                                                    <rect key="frame" x="92" y="8" width="204" height="25.5"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Author name, Author name 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-CL-I5v">
+                                                    <rect key="frame" x="92" y="46.5" width="204" height="20"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="Xpx-NM-nz8"/>
-                                                <constraint firstAttribute="height" constant="100" id="ptJ-D6-mdn"/>
+                                                <constraint firstAttribute="bottom" secondItem="AaU-AG-h2Z" secondAttribute="bottom" constant="8" id="9iz-Zi-PtU"/>
+                                                <constraint firstItem="cKC-Ng-COg" firstAttribute="leading" secondItem="gyG-CL-I5v" secondAttribute="leading" id="FLG-PH-8MY"/>
+                                                <constraint firstItem="AaU-AG-h2Z" firstAttribute="leading" secondItem="IeG-IU-AEk" secondAttribute="leading" constant="4" id="H7D-bq-12m"/>
+                                                <constraint firstItem="NYk-KP-4Ol" firstAttribute="leading" secondItem="AaU-AG-h2Z" secondAttribute="trailing" constant="8" symbolic="YES" id="Hmd-cW-RO3"/>
+                                                <constraint firstItem="AaU-AG-h2Z" firstAttribute="top" secondItem="IeG-IU-AEk" secondAttribute="top" constant="8" id="TKe-7D-F5n"/>
+                                                <constraint firstItem="NYk-KP-4Ol" firstAttribute="top" secondItem="AaU-AG-h2Z" secondAttribute="top" id="Vpe-K3-rEp"/>
+                                                <constraint firstItem="cKC-Ng-COg" firstAttribute="top" secondItem="gyG-CL-I5v" secondAttribute="bottom" constant="8" symbolic="YES" id="bUo-dv-5YZ"/>
+                                                <constraint firstItem="cKC-Ng-COg" firstAttribute="trailing" secondItem="gyG-CL-I5v" secondAttribute="trailing" id="cn7-ks-eVu"/>
+                                                <constraint firstItem="gyG-CL-I5v" firstAttribute="top" secondItem="NYk-KP-4Ol" secondAttribute="bottom" constant="13" id="i2z-8w-C9v"/>
+                                                <constraint firstItem="cKC-Ng-COg" firstAttribute="leading" secondItem="NYk-KP-4Ol" secondAttribute="leading" id="rcX-G3-BS1"/>
+                                                <constraint firstAttribute="trailing" secondItem="NYk-KP-4Ol" secondAttribute="trailing" id="wcz-gv-i1d"/>
+                                                <constraint firstItem="cKC-Ng-COg" firstAttribute="trailing" secondItem="NYk-KP-4Ol" secondAttribute="trailing" id="zbT-Ge-hzs"/>
                                             </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With: Narrator name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKC-Ng-COg">
-                                            <rect key="frame" x="116" y="105" width="196" height="20"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-KP-4Ol">
-                                            <rect key="frame" x="116" y="32" width="196" height="23"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Author name, Author name 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-CL-I5v">
-                                            <rect key="frame" x="116" y="77" width="196" height="20"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="leading" secondItem="AaU-AG-h2Z" secondAttribute="trailing" constant="8" symbolic="YES" id="2bX-bb-laq"/>
-                                        <constraint firstItem="NYk-KP-4Ol" firstAttribute="trailing" secondItem="cKC-Ng-COg" secondAttribute="trailing" id="AR8-yR-bVU"/>
-                                        <constraint firstItem="NYk-KP-4Ol" firstAttribute="leading" secondItem="cKC-Ng-COg" secondAttribute="leading" id="FCr-LU-FQq"/>
-                                        <constraint firstItem="gyG-CL-I5v" firstAttribute="top" secondItem="NYk-KP-4Ol" secondAttribute="bottom" constant="22" id="FRJ-CR-h5M"/>
-                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="top" secondItem="gyG-CL-I5v" secondAttribute="bottom" constant="8" symbolic="YES" id="Sh8-uw-z4R"/>
-                                        <constraint firstItem="gyG-CL-I5v" firstAttribute="leading" secondItem="cKC-Ng-COg" secondAttribute="leading" id="aPZ-l7-KrO"/>
-                                        <constraint firstItem="gyG-CL-I5v" firstAttribute="trailing" secondItem="cKC-Ng-COg" secondAttribute="trailing" id="bEd-1L-BWs"/>
-                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="bottom" secondItem="AaU-AG-h2Z" secondAttribute="bottom" id="d1R-Zw-iVC"/>
-                                        <constraint firstItem="AaU-AG-h2Z" firstAttribute="leading" secondItem="Umo-8J-10c" secondAttribute="leadingMargin" id="tap-P7-gsD"/>
-                                        <constraint firstItem="cKC-Ng-COg" firstAttribute="trailing" secondItem="Umo-8J-10c" secondAttribute="trailingMargin" id="xjI-sD-eH2"/>
+                                        <constraint firstAttribute="bottom" secondItem="IeG-IU-AEk" secondAttribute="bottom" constant="6" id="764-pk-cSG"/>
+                                        <constraint firstAttribute="trailing" secondItem="IeG-IU-AEk" secondAttribute="trailing" constant="12" id="ArM-Vz-pHe"/>
+                                        <constraint firstItem="IeG-IU-AEk" firstAttribute="leading" secondItem="Umo-8J-10c" secondAttribute="leading" constant="12" id="J31-IW-Nvv"/>
+                                        <constraint firstItem="IeG-IU-AEk" firstAttribute="top" secondItem="Umo-8J-10c" secondAttribute="top" constant="8" id="Jgp-Yv-2lD"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="AaU-AG-h2Z" firstAttribute="centerY" secondItem="D3Y-JS-T0k" secondAttribute="centerY" id="RqQ-YS-HfE"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="authorsLabel" destination="gyG-CL-I5v" id="VsS-E2-jSA"/>
                                     <outlet property="bookImage" destination="AaU-AG-h2Z" id="DdU-Tx-VsY"/>
