@@ -23,8 +23,8 @@ class StorytelBridgeApi {
         let urlForRequest = apiUrl + pageURL
         
         Alamofire.request(urlForRequest).responseJSON { (response) in
+            
             switch response.result {
-                
             case .success:
                 let list = List(response: response.result.value)
                 give(list)
