@@ -19,7 +19,6 @@ class ListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         getNeededList()
-        
     }
     
     var currentList = List() {
@@ -70,12 +69,48 @@ class ListTableViewController: UITableViewController {
         
         cell.setCell(with: currentList.books[indexPath.row])
         
-        if indexPath.row == currentList.books.count - 1 {
+//        if indexPath.row == currentList.books.count - 1 {
+//            getNeededList()
+//        }
+        
+        let lastSectionIndex = tableView.numberOfSections - 1
+        let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
+        if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+            let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+            
+            tableView.tableFooterView = spinner
+            tableView.tableFooterView?.isHidden = false
+            
             getNeededList()
         }
         
         return cell
     }
+    
+    
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        if section == 0 {
+//            let footerView = UIView(frame: CGRect.zero)
+//            footerView.backgroundColor = UIColor.gray
+//            
+//            let activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+//            footerView.addSubview(activityView)
+//            activityView.startAnimating()
+//            
+//            activityView.translatesAutoresizingMaskIntoConstraints = false
+//            
+//            NSLayoutConstraint(item: activityView, attribute: .centerX, relatedBy: .equal, toItem: footerView, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
+//            
+//            NSLayoutConstraint(item: activityView, attribute: .centerY, relatedBy: .equal, toItem: footerView, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
+//            
+//            return footerView
+//        } else {
+//            return nil
+//        }
+//        
+//    }
     
     
 }
